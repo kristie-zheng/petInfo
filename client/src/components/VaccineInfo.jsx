@@ -1,3 +1,6 @@
+import React from 'react';
+import FormField from './FormField.jsx'
+
 var VaccineInformation = (props) => {
   var handleClick = props.handleClick;
   var vaccinationFields = props.vaccinationFields;

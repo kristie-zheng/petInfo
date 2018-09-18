@@ -25,7 +25,7 @@ var DisplayedForm = (props) => {
     );
   } else if (props.currentPage === 'medicationInfo') {
     return (
-      <MedicineInformation
+      <MedicationInformation
         medicationFields={props.medicationFields}
         handleClick={props.handleClick}
         handleChange={props.handleChange}
