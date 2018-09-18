@@ -11,7 +11,7 @@ db.once('open', function() {
   console.log('mongoose connected successfully');
 });
 
-var petSchema = mongoose.Schema({
+const petSchema = mongoose.Schema({
   name: { type: String, required: true },
   ownerName: { type: String, required: true },
   type: { type: String, required: true },
@@ -22,11 +22,25 @@ var petSchema = mongoose.Schema({
   birthdate: Date,
   weight: Number,
   microchipID: String,
-  vaccinations: [{ name: { type: String, required: true }, frequency: { type: String, required: true }, lastGiven: Date }],
-  medications: [{ name: { type: String, required: true }, use: { type: String, required: true }, dosage: { type: String, required: true }, frequency: String, startDate: Date, endDate: Date }]
+  vaccinations: [
+    {
+      name: { type: String, required: true },
+      frequency: { type: String, required: true },
+      lastGiven: Date,
+    },
+  ],
+  medications: [
+    {
+      name: { type: String, required: true },
+      use: { type: String, required: true },
+      dosage: { type: String, required: true },
+      frequency: String,
+      startDate: Date,
+      endDate: Date,
+    }],
 });
 
-var Pet = mongoose.model('Pet', petSchema);
+const Pet = mongoose.model('Pet', petSchema);
 
 var selectAll = function(callback) {
   Pet.find({}, function(err, pets) {
