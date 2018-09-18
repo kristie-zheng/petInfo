@@ -23,6 +23,8 @@
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
     "express": "^4.16.3",
     "jquery": "^3.3.1",
     "mongodb": "^3.1.6",
@@ -33,7 +35,5 @@
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.0"
   },
-  "devDependencies": {
-    "cors": "^2.8.4"
-  }
+  "devDependencies": {}
 }
