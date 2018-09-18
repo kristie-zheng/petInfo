@@ -2,14 +2,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-var petsDB = require('../database/index.js');
+const petsDB = require('../database/index.js');
 
-var app = express();
+const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// UNCOMMENT FOR REACT
 app.use(express.static(__dirname + '/../client/dist'));
 
 // app.get('/pets', function(req, res) {
@@ -27,7 +26,7 @@ app.use(express.static(__dirname + '/../client/dist'));
 //   res.json(req.body);
 // });
 
-app.listen(3000, function() {
+app.listen(3000, () => {
   console.log('PetInfo on port 3000!');
 });
 
